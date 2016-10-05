@@ -9,6 +9,12 @@
 
 <h2>List of Projects</h2>
 
-{{#each model as |projectUnit|}}
-  {{project-listing project=projectUnit}}
-{{/each}}
+{{#list-filter
+   filter=(action 'filterByCategory')
+   as |projects|}}
+  <ul class="results">
+    {{#each projects as |projectUnit|}}
+      <li>{{project-listing project=projectUnit}}</li>
+    {{/each}}
+  </ul>
+{{/list-filter}}
