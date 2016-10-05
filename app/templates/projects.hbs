@@ -6,22 +6,9 @@
     About Us
   {{/link-to}}
 </div>
+
 <h2>List of Projects</h2>
 
-{{#each model as |project|}}
-  <article class="listing">
-    <h3>{{project.title}}</h3>
-    <div class="detail founders">
-      <span>Founders:</span> {{project.founders}}
-    </div>
-    <div class="detail category">
-      <span>Category:</span> {{project.category}}
-    </div>
-    <div class="detail headquarters">
-      <span>Headquarters:</span> {{project.headquarters}}
-    </div>
-    <div class="detail founded">
-      <span>Founded:</span> {{project.founded}}
-    </div>
-  </article>
+{{#each model as |projectUnit|}}
+  {{project-listing project=projectUnit}}
 {{/each}}
