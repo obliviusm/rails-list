@@ -6,15 +6,4 @@
     About Us
   {{/link-to}}
 </div>
-
-<h2>List of Projects</h2>
-
-{{#list-filter
-   filter=(action 'filterByCategory')
-   as |projects|}}
-  <ul class="results">
-    {{#each projects as |projectUnit|}}
-      <li>{{project-listing project=projectUnit}}</li>
-    {{/each}}
-  </ul>
-{{/list-filter}}
+{{outlet}}

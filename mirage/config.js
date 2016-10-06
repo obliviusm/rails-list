@@ -46,4 +46,9 @@ export default function() {
       return { data: projects };
     }
   });
+
+  // Find and return the provided rental from our rental list above
+  this.get('/projects/:id', function (db, request) {
+    return { data: projects.find((project) => request.params.id === project.id) };
+  });
 }
