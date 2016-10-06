@@ -7,7 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('projects', function() {});
+  this.route('projects', function() {
+    this.route('show', { path: '/:project_id' });
+  });
   this.route('about');
   this.route('contact');
 });
