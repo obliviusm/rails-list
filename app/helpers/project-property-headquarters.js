@@ -3,7 +3,7 @@ import Ember from 'ember';
 const citiesFromUSA = [
   'San Francisco',
   'New York'
-]
+];
 
 export function projectPropertyHeadquarters([city]/*, hash*/) {
   if ( citiesFromUSA.some( element => city.includes(element) ) ) {
