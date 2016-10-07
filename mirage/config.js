@@ -3,7 +3,7 @@ export default function() {
 
   let projects = [{
     type: 'projects',
-    id: 1,
+    id: "1",
     attributes: {
       title: 'Intercom',
       founders: 'Eoghan McCabe, Des Traynor, Ciaran Lee, & David Barrett',
@@ -14,7 +14,7 @@ export default function() {
     }
   }, {
     type: 'projects',
-    id: 2,
+    id: "2",
     attributes: {
       title: 'Github',
       founders: 'Tom Preston-Werner, Chris Wanstrath, PJ Hyett',
@@ -25,7 +25,7 @@ export default function() {
     }
   }, {
     type: 'projects',
-    id: 3,
+    id: "3",
     attributes: {
       title: 'Kickstarter',
       founders: 'Perry Chen, Yancey Strickler, Charles Adler',
@@ -48,6 +48,7 @@ export default function() {
   });
 
   this.get('/projects/:id', function (db, request) {
+    // console.log(request);
     return { data: projects.find((project) => request.params.id === project.id) };
   });
 }
