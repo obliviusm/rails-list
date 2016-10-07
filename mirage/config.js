@@ -48,7 +48,6 @@ export default function() {
   });
 
   this.get('/projects/:id', function (db, request) {
-    // console.log(request);
     return { data: projects.find((project) => request.params.id === project.id) };
   });
 }
