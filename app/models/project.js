@@ -5,7 +5,7 @@ export default DS.Model.extend({
   founders: DS.attr(),
   headquarters: DS.attr(),
   category: DS.attr(),
-  founded: DS.attr(),
+  foundedAt: DS.attr(),
   image: DS.attr(),
   description: DS.attr()
 });
