@@ -2,10 +2,9 @@
 {{#list-filter
    filter=(action 'filterByCategory')
    as |projects|}}
-  <ul class="results">
-    {{#each projects as |projectUnit|}}
-      <li>{{project-listing project=projectUnit}}</li>
-    {{/each}}
-  </ul>
+   
+  {{#each projects as |projectUnit|}}
+    {{project-listing project=projectUnit}}
+  {{/each}}
 {{/list-filter}}
 {{outlet}}

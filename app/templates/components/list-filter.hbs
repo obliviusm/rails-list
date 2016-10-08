@@ -1,2 +1,6 @@
-{{input value=value key-up=(action 'handleFilterEntry') class="light" placeholder="Filter By Category"}}
+<div class="form-horizontal form-group form-group-lg row">
+  <div class="col-md-6 col-md-offset-3">
+    {{input value=value key-up=(action 'handleFilterEntry') class="light form-control" placeholder="Filter By Category"}}
+  </div>
+</div>
 {{yield results}}

@@ -1,1 +1,14 @@
 @import "bootstrap";
+body {
+  padding-top: 20px;
+}
+
+.image img {
+  width: 100%;
+}
+.wide {
+  width: 100%;
+  small {
+    display: none;
+  }
+}
