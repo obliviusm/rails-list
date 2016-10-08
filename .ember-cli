@@ -4,7 +4,7 @@
     anonymous, but there are times when you might want to disable this behavior.
 
     Setting `disableAnalytics` to true will prevent any data from being sent.
+    "proxy": "https://rails-list-api.herokuapp.com/"
   */
-  "disableAnalytics": false,
-  "proxy": "https://rails-list-api.herokuapp.com/"
+  "disableAnalytics": false
 }
