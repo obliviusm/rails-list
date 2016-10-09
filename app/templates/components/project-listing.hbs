@@ -14,6 +14,9 @@
               {{project.title}}
             {{/link-to}}
           </h3>
+          {{#link-to 'projects.edit' project }}
+            Edit
+          {{/link-to}}
           <div class="detail founders">
             <span>Founders:</span> {{project.founders}}
           </div>
