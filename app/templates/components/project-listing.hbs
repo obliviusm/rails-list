@@ -9,7 +9,11 @@
           </a>
         </div>
         <div class="col-md-8">
-          <h3>{{project.title}}</h3>
+          <h3>
+            {{#link-to 'projects.show' project }}
+              {{project.title}}
+            {{/link-to}}
+          </h3>
           <div class="detail founders">
             <span>Founders:</span> {{project.founders}}
           </div>

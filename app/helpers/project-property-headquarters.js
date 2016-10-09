@@ -6,6 +6,9 @@ const citiesFromUSA = [
 ];
 
 export function projectPropertyHeadquarters([city]/*, hash*/) {
+  if(!city) {
+    city = ""
+  }
   if ( citiesFromUSA.some( element => city.includes(element) ) ) {
     return 'USA';
   }
