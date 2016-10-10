@@ -18,7 +18,7 @@ test('should render resulting project', function(assert) {
   fillIn(".category input", "Developer tools");
   // fillIn(".founded-at input", "screenshot.png");
   fillIn(".image input", "screenshot.png");
-  click("button[type=submit]")
+  click("button[type=submit]");
   andThen(function() {
     assert.ok(/projects\/[0-9]+/g.exec( currentURL() ), 'should redirect to new project');
     assert.equal(find('.title').text().trim(), "Github");
