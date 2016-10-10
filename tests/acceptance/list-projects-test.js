@@ -13,7 +13,7 @@ test('should redirect to projects route.', function (assert) {
 test('should list available projects.', function (assert) {
   visit('/');
   andThen(function () {
-    assert.equal(find('.listing').length, 3, 'should see 3 listings');
+    assert.equal(find('article').length, 67, 'should see 67 listings');
   });
 });
 
