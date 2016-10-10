@@ -9,7 +9,7 @@
           </a>
         </div>
         <div class="col-md-8">
-          <h3>
+          <h3 class="title">
             {{#link-to 'projects.show' project }}
               {{project.title}}
             {{/link-to}}
@@ -18,16 +18,28 @@
             Edit
           {{/link-to}}
           <div class="detail founders">
-            <span>Founders:</span> {{project.founders}}
+            <span>Founders:</span>
+            <span class="text">
+              {{project.founders}}
+            </span>
           </div>
           <div class="detail category">
-            <span>Category:</span> {{project.category}}
+            <span>Category:</span>
+            <span class="text">
+              {{project.category}}
+            </span>
           </div>
           <div class="detail headquarters">
-            <span>Headquarters:</span> {{project-property-headquarters project.headquarters}} - {{project.headquarters}}
+            <span>Headquarters:</span>
+            <span class="text">
+              {{project-property-headquarters project.headquarters}} - {{project.headquarters}}
+            </span>
           </div>
           <div class="detail founded-at">
-            <span>Founded at:</span> {{project.foundedAt}}
+            <span>Founded at:</span>
+            <span class="text">
+              {{project.foundedAt}}
+            </span>
           </div>
         </div>
       </div>

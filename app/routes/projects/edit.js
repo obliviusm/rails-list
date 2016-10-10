@@ -6,7 +6,7 @@ export default Ember.Route.extend({
   },
   actions: {
     saveProject(newProject) {
-      newProject.save().then(() => this.transitionTo('projects'));
+      newProject.save().then((project) => this.transitionTo('projects.show', project));
     },
     willTransition() {
       // rollbackAttributes() removes the record from the store
