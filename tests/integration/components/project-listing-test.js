@@ -14,13 +14,13 @@ test('should toggle wide class on click', function(assert) {
     founders: 'test-name',
     category: 'test-category',
     headquarters: 'test-city',
-    founded: 'test-date'
+    foundedAt: Date.now()
   });
   this.set('projectObj', stubProject);
   this.render(hbs`{{project-listing project=projectObj}}`);
-  assert.equal(this.$('.image.wide').length, 0, 'initially rendered small');
+  assert.equal(this.$('.wide .image').length, 0, 'initially rendered small');
   this.$('.image').click();
-  assert.equal(this.$('.image.wide').length, 1, 'rendered wide after click');
+  assert.equal(this.$('.wide .image').length, 1, 'rendered wide after click');
   this.$('.image').click();
-  assert.equal(this.$('.image.wide').length, 0, 'rendered small after second click');
+  assert.equal(this.$('.wide .image').length, 0, 'rendered small after second click');
 });

@@ -35,20 +35,20 @@ test('should link to contact information.', function (assert) {
 
 test('should filter the list of projects by category.', function (assert) {
   visit('/');
-  fillIn('.list-filter input', 'music');
+  fillIn('.list-filter input', 'tale');
   keyEvent('.list-filter input', 'keyup', 69);
   andThen(function () {
-    assert.equal(find('.listing').length, 1, 'should show 1 listing');
-    assert.equal(find('.listing .category:contains("Music")').length, 1, 'should contain 1 listing with location Music');
+    assert.equal(find('article').length, 10, 'should show 10 listing');
+    assert.equal(find('article .category:contains("tale")').length, 10, 'should contain 10 listing with location tale');
   });
 });
 
 test('should show details for a specific project', function (assert) {
   visit('/');
-  click('a:contains("Intercom")');
+  click('a:contains("Gottlieb and Sons")');
   andThen(function() {
-    assert.equal(currentURL(), '/projects/intercom', 'should navigate to show route');
-    assert.equal(find('.show-listing h2').text(), "Intercom", 'should list project title');
-    assert.equal(find('.description').length, 1, 'should list a description of the project');
+    assert.equal(currentURL(), '/projects/1', 'should navigate to show route');
+    assert.equal(find('article h3 a').text().trim(), "Gottlieb and Sons", 'should list project title');
+    // assert.equal(find('.description').length, 1, 'should list a description of the project');
   });
 });
