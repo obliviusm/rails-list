@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  model() {
+  model(params) {
     return this.store.findRecord('project', params.project_id);
   },
   actions: {
