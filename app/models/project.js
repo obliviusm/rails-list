@@ -17,5 +17,4 @@ export default DS.Model.extend(Validations, {
   category: DS.attr('string'),
   foundedAt: DS.attr('date'),
   image: DS.attr('string')
-  // description: DS.attr('string')
 });

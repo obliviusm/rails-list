@@ -1,9 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
+  showMessage: false,
   actions: {
-    buttonClicked(param) {
-      this.sendAction('action', param);
+    buttonClicked(project) {
+      project.validate().then(({model, validations}) => {
+        if (validations.get('isValid')) {
+          this.sendAction('action', model);
+        } else {
+          this.set('showMessage', true);
+        }
+      });
     }
   }
 });
