@@ -10,7 +10,7 @@
 </div>
 
 {{#list-filter
-   filter=(action 'filterByCategory')
+   filter=(route-action 'filterByCategory')
    as |projects|}}
 
   {{#each projects as |projectUnit|}}
