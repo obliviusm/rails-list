@@ -19,6 +19,8 @@ module.exports = function(environment) {
     }
   };
 
+  ENV.APP.host = 'http://localhost:3000';
+
   ENV['ember-cli-mirage'] = {
     enabled: false
   }
@@ -43,7 +45,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.APP.host = 'https://rails-list-api.herokuapp.com/';
   }
 
   return ENV;
