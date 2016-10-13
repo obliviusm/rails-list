@@ -62,7 +62,7 @@
   <div class="form-group founded-at">
     <label class="col-sm-2 control-label">founded at</label>
     <div class="col-sm-10">
-      {{bootstrap-datepicker value=item.foundedAt autoclose=true placeholder="founded at" class="form-control"}}
+      {{bootstrap-datepicker value=item.foundedAt autoclose=true placeholder="founded at" class="form-control" forceParse=true format="dd/mm/yyyy"}}
     </div>
 
     <div class="input-error col-sm-offset-2 col-sm-10">
