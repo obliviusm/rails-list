@@ -7,9 +7,9 @@
 
     <div class="input-error col-sm-offset-2 col-sm-10">
       {{#if showMessage}}
-          <div class="error">
-              {{v-get item 'title' 'message'}}
-          </div>
+        <div class="error">
+          {{v-get item 'title' 'message'}}
+        </div>
       {{/if}}
     </div>
   </div>
@@ -19,29 +19,73 @@
     <div class="col-sm-10">
       {{input type="text" value=item.founders class="form-control" placeholder="founders"}}
     </div>
+
+    <div class="input-error col-sm-offset-2 col-sm-10">
+      {{#if showMessage}}
+        <div class="error">
+          {{v-get item 'founders' 'message'}}
+        </div>
+      {{/if}}
+    </div>
   </div>
+
   <div class="form-group headquarters">
     <label class="col-sm-2 control-label">headquarters</label>
     <div class="col-sm-10">
       {{input type="text" value=item.headquarters class="form-control" placeholder="headquarters"}}
     </div>
+
+    <div class="input-error col-sm-offset-2 col-sm-10">
+      {{#if showMessage}}
+        <div class="error">
+          {{v-get item 'headquarters' 'message'}}
+        </div>
+      {{/if}}
+    </div>
   </div>
+
   <div class="form-group category">
     <label class="col-sm-2 control-label">category</label>
     <div class="col-sm-10">
       {{input type="text" value=item.category class="form-control" placeholder="category"}}
     </div>
-  </div>
-  <div class="form-group founded-at">
-    <label class="col-sm-2 control-label">foundedAt</label>
-    <div class="col-sm-10">
-      {{bootstrap-datepicker value=item.foundedAt autoclose=true placeholder="Click to play" class="form-control"}}
+
+    <div class="input-error col-sm-offset-2 col-sm-10">
+      {{#if showMessage}}
+        <div class="error">
+          {{v-get item 'category' 'message'}}
+        </div>
+      {{/if}}
     </div>
   </div>
+
+  <div class="form-group founded-at">
+    <label class="col-sm-2 control-label">founded at</label>
+    <div class="col-sm-10">
+      {{bootstrap-datepicker value=item.foundedAt autoclose=true placeholder="founded at" class="form-control"}}
+    </div>
+
+    <div class="input-error col-sm-offset-2 col-sm-10">
+      {{#if showMessage}}
+        <div class="error">
+          {{v-get item 'foundedAt' 'message'}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
+
   <div class="form-group image">
     <label class="col-sm-2 control-label">image</label>
     <div class="col-sm-10">
       {{input type="text" value=item.image class="form-control" placeholder="image"}}
+    </div>
+
+    <div class="input-error col-sm-offset-2 col-sm-10">
+      {{#if showMessage}}
+        <div class="error">
+          {{v-get item 'image' 'message'}}
+        </div>
+      {{/if}}
     </div>
   </div>
 

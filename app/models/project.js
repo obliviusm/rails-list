@@ -7,6 +7,25 @@ const Validations = buildValidations({
     validators: [
       validator('presence', true)
     ]
+  },
+  foundedAt: {
+    description: 'founded at',
+    validators: [
+      validator('date', {
+        before: 'now',
+        format: 'DD/MM/YYYY',
+        message: 'Is it from the future?'
+      })
+    ]
+  },
+  image: {
+    description: 'Image',
+    validators: [
+      validator('format', {
+        allowBlank: false,
+        type: 'url'
+      })
+    ]
   }
 });
 
