@@ -14,6 +14,13 @@
       <ul class="nav navbar-nav">
         {{#link-to 'about' tagName="li"}}<a href="">About</a>{{/link-to}}
         {{#link-to 'contact' tagName="li"}}<a href="">Contact</a>{{/link-to}}
+        {{#if session.isAuthenticated}}
+          <li>
+            <a {{action 'invalidateSession'}}>Logout</a>
+          </li>
+        {{else}}
+          {{#link-to 'login' tagName="li"}}<a href="">Login</a>{{/link-to}}
+        {{/if}}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
