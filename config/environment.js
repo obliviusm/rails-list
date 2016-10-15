@@ -23,8 +23,8 @@ module.exports = function(environment) {
   };
 
   ENV['ember-simple-auth'] = {
-    routeAfterAuthentication: 'project',
-    routeIfAlreadyAuthenticated: 'project'
+    routeAfterAuthentication: 'projects',
+    routeIfAlreadyAuthenticated: 'projects'
   }
 
   ENV.APP.host = 'http://localhost:3000';
