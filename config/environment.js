@@ -16,8 +16,16 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+    },
+    contentSecurityPolicy: {
+      'connect-src': "*"
     }
   };
+
+  ENV['ember-simple-auth'] = {
+    routeAfterAuthentication: 'project',
+    routeIfAlreadyAuthenticated: 'project'
+  }
 
   ENV.APP.host = 'http://localhost:3000';
 
