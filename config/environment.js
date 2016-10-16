@@ -24,7 +24,8 @@ module.exports = function(environment) {
 
   ENV['ember-simple-auth'] = {
     routeAfterAuthentication: 'projects',
-    routeIfAlreadyAuthenticated: 'projects'
+    routeIfAlreadyAuthenticated: 'projects',
+    authorizer: 'authorizer:devise'
   }
 
   ENV.APP.host = 'http://localhost:3000';
