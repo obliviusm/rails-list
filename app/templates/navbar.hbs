@@ -18,7 +18,7 @@
       <ul class="nav navbar-nav navbar-right">
         {{#if session.isAuthenticated}}
           <li>
-            <a  href="" {{action 'invalidateSession'}}>Logout</a>
+            <a  id='logout' href="" {{action 'invalidateSession'}}>Logout</a>
           </li>
         {{else}}
           {{#link-to 'login' tagName="li"}}<a href="">Login</a>{{/link-to}}

@@ -23,7 +23,7 @@ module.exports = function(environment) {
   };
 
   ENV['ember-simple-auth'] = {
-    routeAfterAuthentication: 'about',
+    routeAfterAuthentication: 'projects',
     routeIfAlreadyAuthenticated: 'projects',
     authorizer: 'authorizer:devise'
   }
