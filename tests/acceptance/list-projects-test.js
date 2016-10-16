@@ -1,7 +1,16 @@
 import { test } from 'qunit';
+import Ember from 'ember';
 import moduleForAcceptance from 'rails-list/tests/helpers/module-for-acceptance';
 
-moduleForAcceptance('Acceptance | list projects');
+moduleForAcceptance('Acceptance | list projects', {
+  beforeEach() {
+    visit('/login');
+
+    fillIn(".email input", "test@test.com");
+    fillIn(".password input", "password");
+    click("button[type=submit]");
+  }
+});
 
 test('should redirect to projects route.', function (assert) {
   visit('/');
@@ -13,7 +22,7 @@ test('should redirect to projects route.', function (assert) {
 test('should list available projects.', function (assert) {
   visit('/');
   andThen(function () {
-    assert.equal(find('article').length, 67, 'should see 67 listings');
+    assert.equal(find('article').length, 2, 'should see 2 listings');
   });
 });
 

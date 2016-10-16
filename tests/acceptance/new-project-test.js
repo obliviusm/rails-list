@@ -2,7 +2,15 @@ import { test } from 'qunit';
 import moment from 'moment';
 import moduleForAcceptance from 'rails-list/tests/helpers/module-for-acceptance';
 
-moduleForAcceptance('Acceptance | New Project');
+moduleForAcceptance('Acceptance | New Project', {
+  beforeEach() {
+    visit('/login');
+
+    fillIn(".email input", "test@test.com");
+    fillIn(".password input", "password");
+    click("button[type=submit]");
+  }
+});
 
 function imageUrl() {
   return "https://rails-apps.com/uploads/app/screenshot/500/screenshot.png";
