@@ -21,6 +21,7 @@
             <a  id='logout' href="" {{action 'invalidateSession'}}>Logout</a>
           </li>
         {{else}}
+          {{#link-to 'sign-up' tagName="li"}}<a href="">Sign Up</a>{{/link-to}}
           {{#link-to 'login' tagName="li"}}<a href="">Login</a>{{/link-to}}
         {{/if}}
       </ul>

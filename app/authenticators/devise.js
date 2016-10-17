@@ -39,19 +39,5 @@ export default DeviseAuthenticator.extend({
         run(null, reject, xhr.responseJSON || xhr.responseText);
       });
     });
-  },
-  // makeRequest(data, options) {
-  //   const serverTokenEndpoint = this.get('serverTokenEndpoint');
-  //   let requestOptions = {
-  //     url:      serverTokenEndpoint,
-  //     type:     'POST',
-  //     dataType: 'json',
-  //     data,
-  //     beforeSend(xhr, settings) {
-  //       xhr.setRequestHeader('Accept', settings.accepts.json);
-  //     }
-  //   };
-  //
-  //   return jQuery.ajax(requestOptions);
-  // },
+  }
 });
