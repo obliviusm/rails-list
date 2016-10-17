@@ -2,6 +2,7 @@ import Ember from 'ember';
 import ENV from '../config/environment';
 
 export default Ember.Controller.extend({
+  identification: '',
   actions: {
     register: function() {
       let requestOptions = {
@@ -20,7 +21,8 @@ export default Ember.Controller.extend({
       return jQuery.ajax(requestOptions).then(() => {
         this.transitionToRoute('login');
       }).catch((reason) => {
-        this.set('errorMessage', reason.errors);
+        const message = JSON.parse(reason.responseText).errors.full_messages.join(', ')
+        this.set('errorMessage', message);
       });
     }
   }
