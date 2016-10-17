@@ -1,10 +1,11 @@
 import DeviseAuthenticator from 'ember-simple-auth/authenticators/devise';
 import Ember from 'ember';
+import ENV from '../config/environment';
 
 const { RSVP, isEmpty, run } = Ember;
 
 export default DeviseAuthenticator.extend({
-  serverTokenEndpoint: 'http://localhost:3000/api/auth/sign_in',
+  serverTokenEndpoint: `${ENV.APP.host}/api/auth/sign_in`,
   restore(data){
     return new RSVP.Promise((resolve, reject) => {
       if (!isEmpty(data.accessToken) && !isEmpty(data.expiry) &&

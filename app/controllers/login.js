@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
       let identification = this.get('identification');
       let password = this.get('password');
       return this.get('session').authenticate('authenticator:devise', identification, password).then(() => {
-        this.transitionToRoute('projects')
+        this.transitionToRoute('projects');
       }).catch((reason) => {
         this.set('errorMessage', reason.errors[0]);
       });

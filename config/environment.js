@@ -1,5 +1,5 @@
 /* jshint node: true */
-
+console.log("host ", process.env.APP_HOST);
 module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'rails-list',
@@ -28,7 +28,7 @@ module.exports = function(environment) {
     authorizer: 'authorizer:devise'
   }
 
-  ENV.APP.host = 'http://localhost:3000';
+  ENV.APP.host = process.env.APP_HOST;
 
   ENV['ember-cli-mirage'] = {
     enabled: false
@@ -53,9 +53,9 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
-    ENV.APP.host = 'https://rails-list-api.herokuapp.com/';
-  }
+  // if (environment === 'production') {
+  //   ENV.APP.host = 'https://rails-list-api.herokuapp.com/';
+  // }
 
   return ENV;
 };
