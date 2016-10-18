@@ -22,7 +22,15 @@ test('should redirect to projects route.', function (assert) {
 test('should list available projects.', function (assert) {
   visit('/');
   andThen(function () {
-    assert.equal(find('article').length, 2, 'should see 2 listings');
+    assert.equal(find('article').length, 63, 'should see 63 listings');
+  });
+});
+
+test('should switch to my projects.', function (assert) {
+  visit('/');
+  click('a:contains("Switch to my projects")');
+  andThen(function () {
+    assert.equal(find('article').length, 10, 'should see 10 listings');
   });
 });
 
