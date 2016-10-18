@@ -1,3 +1,6 @@
-import ProjectsController from '../projects';
+import Ember from 'ember';
 
-export default ProjectsController;
+export default Ember.Controller.extend({
+  queryParams: ["currentUser"],
+  currentUser: null
+});
