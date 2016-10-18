@@ -35,5 +35,6 @@ export default DS.Model.extend(Validations, {
   headquarters: DS.attr('string'),
   category: DS.attr('string'),
   foundedAt: DS.attr('date'),
-  image: DS.attr('string')
+  image: DS.attr('string'),
+  userEmail: DS.attr('string')
 });
